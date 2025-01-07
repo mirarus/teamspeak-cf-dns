@@ -1,0 +1,27 @@
+{
+	"name": "mirarus/teamspeak-cf-dns",
+	"description": "TeamSpeak CloudFlare DNS Service",
+	"license": "MIT",
+	"type": "library",
+	"autoload": {
+		"psr-4": {
+			"Mirarus\\TeamSpeakCFDNS\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Ali Güçlü",
+			"email": "aliguclutr@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=7.3.0",
+		"ext-json": "*",
+		"guzzlehttp/guzzle": "^7.9"
+	},
+	"config": {
+		"platform": {
+			"php": "7.3.0"
+		}
+	}
+}
