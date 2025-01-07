@@ -11,7 +11,7 @@ use stdClass;
  * @author     Ali Güçlü <aliguclutr@gmail.com>
  * @copyright  Copyright (c) 2025
  * @license    MIT
- * @version    1.0.0
+ * @version    1.0.1
  * @since      1.0.0
  */
 class Dns
@@ -277,10 +277,10 @@ class Dns
 		if ($ARecordID == null && $SRVRecordID == null) {
 
 			$createARecord = $this->createARecord($name, $host);
-			if ($createARecord->success) {
+			if ($createARecord && $createARecord->success) {
 
 				$createSRVRecord = $this->createSRVRecord($name, $port);
-				if ($createSRVRecord->success) {
+				if ($createSRVRecord && $createSRVRecord->success) {
 					return true;
 				}
 			}
