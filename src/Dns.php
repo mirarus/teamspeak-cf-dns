@@ -11,7 +11,7 @@ use stdClass;
  * @author     Ali Güçlü <aliguclutr@gmail.com>
  * @copyright  Copyright (c) 2025
  * @license    MIT
- * @version    1.0.1
+ * @version    1.0.2
  * @since      1.0.0
  */
 class Dns
@@ -289,15 +289,15 @@ class Dns
 	}
 
 	/**
-	 * @param $name
+	 * @param $currentName
 	 * @param $host
 	 * @param int $port
 	 * @return bool
 	 */
-	public function update($name, $host, int $port): bool
+	public function update($currentName, $name, $host, int $port): bool
 	{
-		$ARecordID = $this->getARecord($name);
-		$SRVRecordID = $this->getSRVRecord($name);
+		$ARecordID = $this->getARecord($currentName);
+		$SRVRecordID = $this->getSRVRecord($currentName);
 
 		if ($ARecordID != null && $SRVRecordID != null) {
 
