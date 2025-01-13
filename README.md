@@ -16,5 +16,5 @@
     $dns->setDomain("mirarus.com.tr");
 
     var_dump($dns->create("mirarus", "127.0.0.1", 9987)); // status => true | false
-    var_dump($dns->update("mirarus", "127.0.0.1", 9987)); // status => true | false
+    var_dump($dns->update("mirarus", "mirarusTS", "127.0.0.1", 9987)); // status => true | false
     var_dump($dns->delete("mirarus")); // status => true | false
